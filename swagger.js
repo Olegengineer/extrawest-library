@@ -1,6 +1,8 @@
 import swaggerJsDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 
+const apiUrl = process.env.API_URL || "http://localhost:8080";
+
 const options = {
   definition: {
     openapi: "3.0.0",
@@ -11,7 +13,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:8080",
+        url: apiUrl,
       },
     ],
   },
